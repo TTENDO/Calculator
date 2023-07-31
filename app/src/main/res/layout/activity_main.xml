@@ -105,8 +105,9 @@
         android:text="@string/display_answer"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/theButtonsLayout"
-        app:layout_constraintVertical_bias="0.059"
-        tools:layout_editor_absoluteX="40dp" />
+        app:layout_constraintVertical_bias="0.059" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
