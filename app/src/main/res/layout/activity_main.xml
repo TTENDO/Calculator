@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/calculator_icon" />
 
     <EditText
-        android:id="@+id/firstNo"
+        android:id="@+id/first_No"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_margin="20dp"
@@ -29,14 +29,14 @@
         tools:layout_editor_absoluteX="40dp" />
 
     <EditText
-        android:id="@+id/secondNo"
+        android:id="@+id/second_No"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_margin="20dp"
         android:ems="10"
         android:hint="@string/second_number"
         android:inputType="number"
-        app:layout_constraintTop_toBottomOf="@+id/firstNo" />
+        app:layout_constraintTop_toBottomOf="@+id/first_No" />
 
     <LinearLayout
         android:id="@+id/theButtonsLayout"
@@ -45,7 +45,7 @@
         android:layout_margin="10dp"
         android:layout_marginTop="56dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/secondNo"
+        app:layout_constraintTop_toBottomOf="@+id/second_No"
         tools:layout_editor_absoluteX="9dp">
 
         <Button
@@ -115,10 +115,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/theButtonsLayout"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.293" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
