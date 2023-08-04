@@ -7,6 +7,16 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
+    <ImageView
+        android:id="@+id/calc_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/calculator_icon" />
+
     <EditText
         android:id="@+id/firstNo"
         android:layout_width="match_parent"
@@ -15,7 +25,7 @@
         android:ems="10"
         android:hint="@string/first_number"
         android:inputType="number"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calc_image"
         tools:layout_editor_absoluteX="40dp" />
 
     <EditText
@@ -26,8 +36,7 @@
         android:ems="10"
         android:hint="@string/second_number"
         android:inputType="number"
-        app:layout_constraintTop_toBottomOf="@+id/firstNo"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/firstNo" />
 
     <LinearLayout
         android:id="@+id/theButtonsLayout"
@@ -40,7 +49,7 @@
         tools:layout_editor_absoluteX="9dp">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/add_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -53,7 +62,7 @@
             app:cornerRadius="40dp" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/subtract_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -66,7 +75,7 @@
             app:cornerRadius="40dp" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/multiply_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -79,7 +88,7 @@
             app:cornerRadius="40dp" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/divide_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -94,7 +103,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/display_answer"
         android:layout_width="330dp"
         android:layout_height="113dp"
         android:layout_margin="40dp"
@@ -106,8 +115,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/theButtonsLayout"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintVertical_bias="1.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
