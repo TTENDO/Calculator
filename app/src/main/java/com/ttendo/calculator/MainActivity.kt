@@ -6,22 +6,24 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import com.ttendo.calculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val image = findViewById<ImageView>(R.id.calc_image)
-        val firstNoEditText = findViewById<EditText>(R.id.first_No)
-        val secondNoEditText = findViewById<EditText>(R.id.second_No)
+        val image = binding.calcImage
+        val firstNoEditText = binding.firstNo
+        val secondNoEditText = binding.secondNo
 
-        val sumButton = findViewById<Button>(R.id.add_button)
-        val differenceButton : Button = findViewById(R.id.subtract_button)
-        val productButton : Button = findViewById(R.id.multiply_button)
-        val divisionButton : Button = findViewById(R.id.divide_button)
+        val sumButton = binding.addButton
+        val differenceButton = binding.subtractButton
+        val productButton = binding.multiplyButton
+        val divisionButton = binding.divideButton
 
-        val answerText : TextView = findViewById(R.id.display_answer)
+        val answerText = binding.displayAnswer
 
         /**Implementing button click events**/
         sumButton.setOnClickListener{
